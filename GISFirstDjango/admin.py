@@ -1,6 +1,6 @@
 from django.apps import apps
 from django.contrib import admin
-
+from GISFirstDjango.models import Person
 
 def register_all_app_models():
     """
@@ -24,3 +24,6 @@ def register_all_app_models():
                 admin.site.register(model, modelAdmin)
         except admin.sites.AlreadyRegistered:
             pass
+
+register_all_app_models()
+admin.site.register(Person)
