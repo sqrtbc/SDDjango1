@@ -26,4 +26,3 @@ def register_all_app_models():
             pass
 
 register_all_app_models()
-admin.site.register(Person)
