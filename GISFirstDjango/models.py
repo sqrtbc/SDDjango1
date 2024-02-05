@@ -7,4 +7,6 @@ class Person(models.Model):
     age = models.IntegerField(blank=False, null=True)
 
 class TeachingGroup(models.Model):
-    students = models.OneToOneField(Person, null=True, on_delete=models.SET_NULL)
+    name = models.CharField(max_length=30, null=True)
+    students = models.ForeignKey(Person, null=True, on_delete=models.SET_NULL)
+    year_group = models.IntegerField(blank=False, null=True)
